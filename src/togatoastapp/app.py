@@ -5,6 +5,7 @@ My first application
 import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
+from toga_toast import show_toast
 
 
 class TogaToastApp(toga.App):
@@ -15,7 +16,7 @@ class TogaToastApp(toga.App):
         We then create a main window (with a name matching the app), and
         show the main window.
         """
-        main_box = toga.Box()
+        main_box = toga.Box(children=[toga.Button(text="Trigger toastmessage", on_click=lambda _:show_toast(message="Hello World"))])
 
         self.main_window = toga.MainWindow(title=self.formal_name)
         self.main_window.content = main_box
