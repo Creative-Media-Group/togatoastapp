@@ -16,7 +16,7 @@ long_description = """More details about the app should go here.
 sources = ["src/togatoastapp"]
 test_sources = ["tests"]
 
-requires = []
+requires = ["toga_toast"]
 test_requires = ["pytest"]
 
 [tool.briefcase.app.togatoastapp.macOS]
@@ -143,7 +143,7 @@ requires = ["toga-winforms~=0.5.0"]
 requires = ["toga-iOS~=0.5.0", "std-nslog~=1.0.3"]
 
 [tool.briefcase.app.togatoastapp.android]
-requires = ["toga-android~=0.5.0", "toga_toast"]
+requires = ["toga-android~=0.5.0"]
 
 base_theme = "Theme.MaterialComponents.Light.DarkActionBar"
 
